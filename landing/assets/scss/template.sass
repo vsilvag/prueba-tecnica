@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i,800')
+
+/* Variables y funciones */
+
+$font-stack: 'Open Sans', sans-serif
+$primary-color: #000
+$text-color-important: #f8393a
+$text-color-white: #FFF
+$footer-background: #32afd8
+
+=border-radius($property)
+	-webkit-border-radius: $property
+	-moz-border-radius: $property
+	border-radius: $property
+
+=background-size($property)
+	-webkit-background-size: $property
+	-moz-background-size: $property
+	-o-background-size: $property
+	background-size: $property
+
+@mixin buttons($color)
+	background-color: $color
+	color: #FFF
+	padding: 15px 10px
+	font-size: 16px
+	width: 220px
+	line-height: 100%
+	text-shadow: 1px 1px 0 rgba(0,0,0,.1)
+	box-shadow: 0 -3px 0 rgba(0,0,0,.2) inset
+	+border-radius(5px)
+@mixin buttonsHover($color)
+	background-color: $color
+	color: #FFF
+	text-decoration: none
+
+/***** Template style *****/
+body
+	font: 100% $font-stack
+	color: $primary-color
+	padding-top: 20px
+	background: url("../../images/background.jpg") no-repeat top center fixed
+	+background-size(cover)
+main
+	margin-top: 4rem
+
+/* Botones */
+.button-01
+	@include buttons(#f8393a)
+	padding: 23px 10px
+.button-01:hover
+	@include buttonsHover(#d33031)
+
+.button-02
+	@include buttons(#007abe)
+	margin-left: 40px
+	margin-right: 40px
+.button-02:hover
+	@include buttonsHover(#00659e)
+
+.button-03
+	@include buttons(#00a957)
+	padding: 23px 10px
+.button-03:hover
+	@include buttonsHover(#008544)
+
+
+/* Texto */
+.text-md
+	font-size: 1.2em
+.text-important
+	font-size: 1.2em
+	font-weight: 800
+	color: $text-color-important
+
+.icon-list
+	padding-left: 0em
+	margin-top: 2.8em
+	li
+		list-style: none
+		padding-top: 80px
+		text-align: center
+		margin-bottom: 2em
+		font-size: .9em
+	&_saldo
+		background: url("../../images/icons/saldo.png") no-repeat top center
+	&_transferencia
+		background: url("../../images/icons/transferencia.png") no-repeat top center
+	&_pagos
+		background: url("../../images/icons/pagos.png") no-repeat top center
+	&_creditos
+		background: url("../../images/icons/creditos.png") no-repeat top center
+	&_tarjetas
+		background: url("../../images/icons/tarjetas.png") no-repeat top center
+	&_seguros
+		background: url("../../images/icons/seguro.png") no-repeat top center
+	&_cajeros
+		background: url("../../images/icons/cajeros.png") no-repeat top center
+	&_masservicios
+		background: url("../../images/icons/masservicios.png") no-repeat top center
+
+/* Footer */
+.footer
+	&-content
+		background: $footer-background
+		color: $text-color-white
+		padding-top: 15px
+		padding-bottom: 15px
+		+border-radius(5px)
+		margin-bottom: 1.5em
+		h4
+			text-align: center
+			margin-bottom: 1.3em
+	&-li li
+		padding-left: 50px
+		font-size: .8em
+		padding-bottom: 1em
+		strong
+			display: block
+			font-size: 1.2em
+	&-li
+		list-style: none
+		&_consejo-01
+			background: url("../../images/icons/consejo01.png") no-repeat top left
+		&_consejo-02
+			background: url("../../images/icons/consejo02.png") no-repeat top left
+		&_consejo-03
+			background: url("../../images/icons/consejo03.png") no-repeat top left
+		&_consejo-04
+			background: url("../../images/icons/consejo04.png") no-repeat top left
+
